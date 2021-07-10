@@ -29,7 +29,7 @@ public class WaterStatus : MonoBehaviour
             TerrainCollection.DirtCount--;
             TerrainCollection.WaterCount ++;
             Destroy(this.gameObject);
-            // ToDo  火车加相应车厢
+            
         }
 
     }
