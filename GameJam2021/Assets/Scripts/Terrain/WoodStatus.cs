@@ -30,7 +30,7 @@ public class WoodStatus : MonoBehaviour
             TerrainCollection.FireCount --;
            TerrainCollection.WoodCount++;
             Destroy(this.gameObject);
-            // ToDo  火车加相应车厢
+            
         }
 
     }
