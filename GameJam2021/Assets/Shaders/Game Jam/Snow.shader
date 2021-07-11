@@ -6,7 +6,7 @@ Shader "Game Jam/Snow"
         _Color("Color Tint", color) = (1,1,1,1)
         
         //ÑÒÊ¯ÌùÍ¼
-		[NoScaleOffset]_MainTex ("Main Texture (RGB)", 2D) = "white" {}
+		_MainTex ("Main Texture (RGB)", 2D) = "white" {}
         //¸²¸ÇÇøÓò
         _Cover ("Cover Area", float) = 0
 		//·¨ÏßÌùÍ¼
@@ -54,6 +54,7 @@ Shader "Game Jam/Snow"
  
             TEXTURE2D(_MainTex);
             SAMPLER(sampler_MainTex);
+            float4 _MainTex_ST;
             TEXTURE2D(_Bump);
             SAMPLER(sampler_Bump);
             CBUFFER_START(UnityPerMaterial)
@@ -104,7 +105,7 @@ Shader "Game Jam/Snow"
                 VertexPositionInputs vertexInput = GetVertexPositionInputs(v.positionOS.xyz);
                 VertexNormalInputs normalInput = GetVertexNormalInputs(v.normalOS, v.tangentOS);
                 o.positionCS = vertexInput.positionCS;
-                o.uv = v.texcoord;
+                o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
                 o.normalWS = normalInput.normalWS;
                
                 #if defined(_MAIN_LIGHT_SHADOWS)

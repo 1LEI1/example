@@ -26,7 +26,7 @@ Material:
     m_Floats:
     - _FillCenter: 1
     - _Gloss: 20
-    - _Outline: 0.03
+    - _Outline: 0.031
     - _TransVal: 1
     m_Colors:
     - _Color: {r: 5.992157, g: 5.992157, b: 5.992157, a: 1}

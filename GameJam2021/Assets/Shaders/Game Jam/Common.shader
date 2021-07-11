@@ -4,7 +4,7 @@ Shader "Game Jam/Common"
         _Outline ("Outline", Range(0, 1)) = 0.1
         _OutlineColor ("Outline Color", Color) = (0, 0, 0, 1)
         _Color("Color Tint", color) = (1,1,1,1)
-        [NoScaleOffset]_MainTex ("Main Texture (RGB)", 2D) = "white" {}
+        _MainTex ("Main Texture (RGB)", 2D) = "white" {}
      
     } 
     SubShader {
@@ -39,13 +39,9 @@ Shader "Game Jam/Common"
  
             TEXTURE2D(_MainTex);
             SAMPLER(sampler_MainTex);
- 
+            float4 _MainTex_ST;
             CBUFFER_START(UnityPerMaterial)
- 
-            float4  _Forground;
-            float _TransVal;
             float4 _Color;
-            float _FillCenter;
             CBUFFER_END
  
             struct a2v
@@ -81,8 +77,9 @@ Shader "Game Jam/Common"
                 VertexPositionInputs vertexInput = GetVertexPositionInputs(v.positionOS.xyz);
                 VertexNormalInputs normalInput = GetVertexNormalInputs(v.normalOS, v.tangentOS);
                 o.positionCS = vertexInput.positionCS;
- 
-                o.uv = v.texcoord;
+                
+                o.uv = TRANSFORM_TEX(v.texcoord, _MainTex); 
+                //o.uv = v.texcoord;
  
              
                 o.normalWS = normalInput.normalWS;
