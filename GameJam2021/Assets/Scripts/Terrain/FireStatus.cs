@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-///<summary>
-///
-///<summary>
+
 public class FireStatus : MonoBehaviour
 {
     private TerrainCollection   FireStatus_TerrainCollection;
@@ -34,19 +32,10 @@ public class FireStatus : MonoBehaviour
         {
             PlayerController.speed = 10;
             TerrainCollection.WaterCount--;
-           TerrainCollection.FireCount++;
-
-            //currentIndex = FireStatus_TerrainCollection.trainBodys.Length;
-            //TerrainCollection.length++;
-            //AddFireBody();
+           TerrainCollection.FireCount ++;
             Destroy(this.gameObject);
-            // ToDo  火车加相应车厢
         }
 
     }
-    //void AddFireBody()
-    //{
-    //    GameObject fireBody = Instantiate(FireBodyPrefab) as GameObject;
-    //    fireBody.transform.position = TerrainCollection.lastOnePostion;
-    //}
+
 }
