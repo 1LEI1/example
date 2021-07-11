@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5790567476456730964}
   - component: {fileID: 5790567476456730963}
   - component: {fileID: 1377758828}
+  - component: {fileID: 6374425473992333775}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Untagged
@@ -93,5 +94,19 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.000024, y: 1.000024, z: 1.000024}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6374425473992333775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790567476456730962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d2f581c5e32954098b493bf5bdcb55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: 0
+  fire: 0

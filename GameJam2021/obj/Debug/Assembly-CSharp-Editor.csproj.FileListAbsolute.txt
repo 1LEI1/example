@@ -1,0 +1,2 @@
+D:\aboutUnity\unityproject\example\GameJam2021\obj\Debug\Assembly-CSharp-Editor.csproj.AssemblyReference.cache
+D:\aboutUnity\unityproject\example\GameJam2021\obj\Debug\Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache

@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 4517510945614550}
   - component: {fileID: 33015888821793180}
   - component: {fileID: 23233668381143730}
+  - component: {fileID: 2036444504}
   m_Layer: 0
   m_Name: Windmill_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4517510945614550
 Transform:
@@ -82,6 +83,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2036444504
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367321601615478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.760203, z: 1}
+  m_Center: {x: 0, y: 1.8437915, z: 0}
 --- !u!1 &1707513407751872
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +113,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4091935383681974
 Transform:
@@ -142,7 +156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6a9edeee08fbc784ba01c0d5c2632b67, type: 2}
+  - {fileID: 2100000, guid: 10e0ab22902ca104bb1363b14a8a9717, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
